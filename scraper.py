@@ -3,6 +3,6 @@ import requests
 from bs4 import BeautifulSoup
 # import json
 
-response = requests.get('https://www.twse.com.tw/exchangeReport/BWIBBU_d?response=json&date=20220527&selectType=30&_=1653814046068')
-# print(response.headers['Content-Type'])
-print(response.json()['data'])
+response = requests.get('https://mis.taifex.com.tw/futures/RegularSession/EquityIndices/FuturesDomestic/')
+print(response.text.find('臺指現貨'))
+# print(response.json()['data'])
